@@ -1,0 +1,171 @@
+@import url(https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-color-tertiary: #7e88c3;
+}
+
+:root{
+  --font-color-primary: #0c0e16;
+  --font-color-secondary: #888eb0;
+  --border-color-primary: #e0e4fa;
+  --border-color-secondary: #9175ff;
+  --background-color: #f8f8fb;
+  --background-nav-color: #373a53;
+  --background-box-color: #fff;
+  --background-modal-colar: #fff;
+  --button-color-primary: #7b5cfa;
+  --button-color-primary-light: #9277ff;
+  --button-color-secondary: #f6f8fe;
+  --button-color-secondary-dark: #e0e4fa;
+  --status-color-accepted: #33d69f;
+  --status-bg-color-accepted: rgba(48, 213, 155, 0.0571);
+  --status-color-pending: #ff8c00;
+  --status-bg-color-pending: rgba(255, 140, 0, 0.0571);
+  --status-color-declined: rgba(231, 76, 60, 1);
+  --status-bg-color-declined: rgba(255, 107, 107, 0.0571);
+  --status-color-draft: #373b53;
+  --status-bg-color-draft: rgba(55, 58, 83, 0.0571);
+  --table-color: #fff;
+  --table-bg-color-primary: #f9fafe;
+  --table-bg-color-secondary: #373b53;
+  --error-color: #ec5555;
+  --error-color-dark: #db2f2f;
+}
+
+
+[theme="custom-dark"] {
+  --font-color-primary: #fff;
+  --font-color-secondary: #dfe3fa;
+  --border-color-primary: #252946;
+  --border-color-secondary: #7b5cfa;
+  --background-color: #141625;
+  --background-nav-color: #1e2139;
+  --background-box-color: #1e2139;
+  --background-modal-colar: #141624;
+  --button-color-secondary: #252946;
+  --status-color-draft: #dfe3fa;
+  --status-bg-color-draft: rgba(223, 227, 250, 0.06);
+  --table-bg-color-primary: #252945;
+  --table-bg-color-secondary: #0c0e16;
+}
+
+body {
+    font-family: Spartan, sans-serif;
+    color: var(--font-color-primary);
+    background-color: var(--background-color);
+    transition: .2s;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 16px 24px;
+  border-radius: 30px;
+  border: none;
+  font-size: .75rem;
+  font-weight: 700;
+  color: #fff;
+  transition: .2s;
+}
+
+.btn--purple {
+  background-color: var(--button-color-primary);
+}
+
+.btn--light-gray {
+  background-color: var(--button-color-secondary);
+  color: var(--font-color-tertiary);
+}
+
+.btn--error {
+  color: var(--table-color);
+  background-color: var(--error-color);
+}
+
+.btn--error:hover {
+  background-color: var(--error-color-dark);
+}
+
+.btn:hover {
+  opacity: .75;
+}
+
+button {
+  cursor: pointer;
+}
+
+.invoice-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  padding: 12px 8px;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+.invoice-status::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;  
+}
+
+.invoice-status.accepted {
+  color: var(--status-color-accepted);
+  background-color: var(--status-bg-color-accepted);
+}
+
+.invoice-status.accepted:before {
+  background-color: var(--status-color-accepted);
+}
+
+.invoice-status.pending {
+  color: var(--status-color-pending);
+  background-color: var(--status-bg-color-pending);
+}
+
+.invoice-status.pending::before {
+  background-color: var(--status-color-pending);
+  
+}
+
+.invoice-status.draft {
+  color: var(--status-color-draft);
+  background-color: var(--status-bg-color-draft);
+}
+
+.invoice-status.draft::before {
+  background-color: var(--status-color-draft);
+}
+
+.invoice-status.declined {
+  color: var(--status-color-declined);
+  background-color: var(--status-bg-color-declined);
+}
+
+.invoice-status.declined::before {
+  background-color: var(--status-color-declined);
+}
+
+.Vue-Toastification__container {
+  z-index: 9999;
+}
